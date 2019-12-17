@@ -30,7 +30,7 @@ My pipeline consisted of 5 steps.
 First, I converted the images to grayscale using the provided grayscale function, then I pre-processed the image for edge detection by passing it through a blurring filter. A Gaussian filter was used. In order to determine the filter parameters I designed a graphics based tunning (GBT) tool which allowed me vary parameters of the filter and visually observe the output. The third step was to carry out Canny Edge detection on the blurred image. The GBT tool was also used to identify the values of the parameters of the edge detecton function. 
 The result of Edge detection is presented in [image1]: ./image_output/EdgeDetected.jpg "Edge Detection"
 
-Subsequently, region of interest was isolated by masking the edge-detected image with a 4-cornered polygon. The 4-cornered polygon was constructed by identifying region of interest in the image.  The isolated image is presented in [image2]: ./image_output/Isolated.jpg "Region of Interest"
+Subsequently, region of interest was isolated by masking the edge-detected image with a 4-cornered polygon. The 4-cornered polygon was constructed by identifying region of interest in the image.  The isolated image is presented in [image2]: <img src="./image_output/Isolated.jpg" width="480" alt="Region of Interest" /> 
 
 The Hough_lines function designed using the HoughLinesP tool was used to identify group of points that form lines. The values of the parameters was selected by observing their effects using the GBT tool.
 
@@ -42,12 +42,13 @@ Finally, the image with extrapolated lines was placed on the original image usin
 
 The performance of the pipeline was tested using all the sample images provided and it proved to work adequately as shown below.
 
-[image3]: ./image_output/solidWhiteCurve.jpg "solidWhiteCurve"
-[image4]: ./image_output/solidWhiteRight.jpg "solidWhiteRight"
-[image5]: ./image_output/solidYellowCurve.jpg "solidYellowCurve"
-[image6]: ./image_output/solidYellowCurve2.jpg "solidYellowCurve2"
-[image7]: ./image_output/solidYellowLeft.jpg "solidYellowLeft"
-[image7]: ./image_output/whiteCarLaneSwitch.jpg "whiteCarLaneSwitch"
+[image3]: <img src="./image_output/solidWhiteCurve.jpg" width="480" alt="solidWhiteCurve" /> 
+[image4]: <img src="./image_output/solidWhiteRight.jpg" width="480" alt="solidWhiteRight" /> 
+[image5]: <img src="./image_output/solidYellowCurve.jpg" width="480" alt="solidYellowCurve" /> 
+[image6]: <img src="./image_output/solidYellowCurve2.jpg" width="480" alt="solidYellowCurve2" /> 
+[image7]: <img src="./image_output/solidYellowLeft.jpg" width="480" alt="solidYellowLeft" /> 
+[image8]: <img src="./image_output/whiteCarLaneSwitch.jpg" width="480" alt="whiteCarLaneSwitch" /> 
+
 
 ### 1b. Challenges faced during the project
 First challenge I faced was finding the average of extrapolated lines instead of extrapolating the average of the points. Finding the average of extrapolated lines made the pipeline fail and the video was always messed up.
